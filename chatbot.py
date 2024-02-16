@@ -10,12 +10,9 @@ st.title("Chat-with-your-codebase")
 
 ## Get some user inputs
 
-user_key = st.text_input("Enter your OpenAI Key", "")
+user_key = st.text_input("Enter your HF Key", "")
 if user_key:
-    os.environ['OPENAI_API_KEY'] = user_key
-# else:
-#     user_key = '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'
-#     os.environ['OPENAI_API_KEY'] = user_key
+    os.environ['HUGGINGFACEHUB_API_TOKEN'] = user_key
 
     user_repo = st.text_input("Github Link to your public codebase", "https://github.com/facebookresearch/segment-anything.git")
     if user_repo:
